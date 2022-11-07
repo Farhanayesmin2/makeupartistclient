@@ -1,8 +1,26 @@
-# Getting Started with Create React App
+### My Makeup Artist Website step:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 1: # Getting Started with Create React App
 
-## Available Scripts
+Open cmd and select file,
+then,
+npx create-react-app makeup-artist-client
+
+## Install Tailwind CSS
+
+For tailwind install follow this step,
+1.npm install -D tailwindcss
+npx tailwindcss init
+
+2.Add the paths to all of your template files in your tailwind.config.js file.
+content: ["./src/**/*.{html,js}"],
+
+3. Add the @tailwind directives for each of Tailwind’s layers to your main CSS file, add index.css
+   @tailwind base;
+   @tailwind components;
+   @tailwind utilities;
+
+4.Add link on index.html <link href="/dist/output.css" rel="stylesheet"> and again npm start
 
 In the project directory, you can run:
 
