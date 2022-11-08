@@ -40,13 +40,16 @@ step: npm install react-router-dom@6
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the project use:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. install flowbite react:https://flowbite-react.com/
+2. Tailwind css:https://tailwindcss.com/
+3. react router dom:https://reactrouter.com/
+   4: firebase install:https://console.firebase.google.com/project/learn-code-b31de/authentication/providers
+4. react icons:https://react-icons.github.io/react-icons/
+5. pdf to react:https://react-pdf.org/
+6. toast: https://www.npmjs.com/package/react-toastify
+7. React Env: https://create-react-app.dev/docs/adding-custom-environment-variables/
 
 ### `npm run eject`
 
