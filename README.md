@@ -22,20 +22,21 @@ content: ["./src/**/*.{html,js}"],
 
 4.Add link on index.html <link href="/dist/output.css" rel="stylesheet"> and again npm start
 
-In the project directory, you can run:
+`For MUMBA UI`
+
+npm install tailwindcss postcss autoprefixer -D
+
+### Use Plugin for tailwind css
+
+1. npm i flowbite flowbite-react
+2. add the content, 'node\*modules/flowbite-react/\*\*/\_.{js,jsx,ts,tsx}'
+3. require('flowbite/plugin')
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# install React Router Dom
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+step: npm install react-router-dom@6
 
 ### `npm run build`
 
