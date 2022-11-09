@@ -105,7 +105,7 @@ const SignUp = () => {
           <img
             alt="bride"
             src="https://i.ibb.co/VY0FDq1/297238794-463520015784906-5515601907517655197-n.jpg"
-            className="object-fill w-96 rounded-md xl:col-span-3 bg-gray-900 opacity-25"
+            className="object-cover w-full rounded-md xl:col-span-3 bg-gray-900 opacity-25"
           />
         </div>
       </section>
