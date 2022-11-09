@@ -20,15 +20,15 @@ const Banner = () => {
                 jumps over a{" "}
                 <span className="text-teal-accent-400">lazy dog</span>
               </h2>
-              <p className="max-w-xl mb-4 text-base text-gray-400 md:text-lg">
+              <p className="max-w-xl text-base text-gray-400 md:text-lg">
                 Sed ut perspiciatis unde omnis iste natus error sit voluptatem
                 accusantium doloremque laudan, totam rem aperiam, eaque ipsa
                 quae.
               </p>
-              <a
+              <Link
                 href="/"
                 aria-label=""
-                className="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
+                className="py-2 text-white  inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
               >
                 Learn more
                 <svg
@@ -38,7 +38,7 @@ const Banner = () => {
                 >
                   <path d="M9.707,5.293l-5-5A1,1,0,0,0,3.293,1.707L7.586,6,3.293,10.293a1,1,0,1,0,1.414,1.414l5-5A1,1,0,0,0,9.707,5.293Z" />
                 </svg>
-              </a>
+              </Link>
               <div className="shadow-gray-900 bg-opacity-75  shadow-2xl py-6 px-4 rounded bg-gradient-to-l from-pink-200 via-rose-400 to-pink-600 text-gray-50">
                 <div className="container mx-auto">
                   <div className="flex flex-col lg:flex-row  items-center justify-between">
