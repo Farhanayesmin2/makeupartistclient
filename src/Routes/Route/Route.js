@@ -1,3 +1,4 @@
+import Login from "../../Pages/Login/Login";
 import NotFound from "../../Pages/NotFound/NotFound";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -16,6 +17,10 @@ const { default: Banner } = require("../../Pages/Shared/Header/Banner/Banner");
             {
                 path: '/',
                 element: <Banner></Banner>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
             }
          ]
          
