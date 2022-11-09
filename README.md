@@ -60,3 +60,13 @@ In the project use:
 3. npm install cors
 4. npm install mongodb
 5. npm install dotenv
+
+# Install Firebase
+
+step: 1 npm install firebase
+step: 2 Create the firebase Auth
+step: 3 Enable the google,email auth.
+
+# install React Icon
+
+step: npm install react-icons --save
