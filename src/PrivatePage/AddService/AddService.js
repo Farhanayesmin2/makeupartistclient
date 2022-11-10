@@ -1,7 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-
+//import { Navigate, useLocation } from 'react-router-dom';
+//import { AuthContext } from '../../Context/UserContext/UserContext';
 const AddService = () => {
+ 
+        // console.log(title,price,photourl);
+    //     const {user, loading} = useContext(AuthContext);
+    //     const location = useLocation();
+    //     if(user){
+    //         return <Navigate to="/addservice" state={{from: location}} replace></Navigate>
+    //     }
+    // console.log(user);
+
+
   const handleAddService = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -12,7 +23,7 @@ const AddService = () => {
     const photourl = form.photourl.value;
     const title = form.title.value;
 
-    // console.log(title,price,photourl);
+      
 
     const addservice = {
       name: name,

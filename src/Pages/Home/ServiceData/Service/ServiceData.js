@@ -1,17 +1,25 @@
-import React, { useState } from 'react';
+import { Spinner } from 'flowbite-react';
+import React, { useContext, useState } from 'react';
 import { useEffect } from 'react';
+import { AuthContext } from '../../../../Context/UserContext/UserContext';
 import Dataa from './../DataLimit/Dataa';
 
 
 const ServiceData = () => {
     const [services, setServices] = useState([]);
+    const { loading} = useContext(AuthContext);
+    
 
+   
+    
     useEffect( () =>{
         fetch('http://localhost:5000/services')
         .then(res =>res.json())
         .then(data => setServices(data))
     }, []);
-
+    if(loading){
+        return  <Spinner animation="border" variant="primary" />
+    }
 console.log(services);
     return (
         <div>

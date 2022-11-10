@@ -1,34 +1,34 @@
-import {  Alert, Toast } from 'flowbite-react';
+
 import React, { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Context/UserContext/UserContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { FcKindle, FcTabletAndroid } from "react-icons/fc";
-import { FaEye } from "react-icons/fa";
+import { FcTabletAndroid } from "react-icons/fc";
+
 
 
 
 const Register = () => {
     const [error, setError] = useState('');
- 
-    const [accepted, setAccepted] = useState(false);
-    const { createUser, updateUserProfile, verifyEmail } = useContext(AuthContext);
+    
+
+    const { createUser} = useContext(AuthContext);
 
 
 
     const handleRegister = event => {
-        event.preventDefault();
-        const form = event.target;
-        const name = form.name.value;
-
-        const email = form.email.value;
-        const password = form.password.value;
-        const confirm = form.confirm.value;
-        console.log(name, email, password);
+      event.preventDefault();
+      const form = event.target;
+      const name = form.name.value;
+   
+      const email = form.email.value;
+      const password = form.password.value;
+      const confirm = form.confirm.value;
+      console.log(name,  email, password);
   
-        createUser(email, password)
+        createUser( email, password)
             .then(result => {
                 const user = result.user;
                 console.log(user);
@@ -75,6 +75,13 @@ const Register = () => {
       <form  onSubmit={handleRegister} className="flex flex-col gap-4">
         <input
           className="p-2 mt-8 rounded-xl border"
+          type="name"
+          name="name"
+                  placeholder="Name"
+                  
+        />
+        <input
+          className="p-2  rounded-xl border"
           type="email"
           name="email"
                   placeholder="Email"
@@ -143,12 +150,12 @@ theme="light"
                   </p>
                
 
-       
+                       
                               <button
-                      type="button"
+                      type="submit"
                       class="text-black bg-gradient-to-r from-rose-600 via-pink-200 to-rose-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 shadow-lg shadow-pink-500/50 dark:shadow-lg dark:shadow-pink-800/80 font-medium  text-sm px-5  text-center mr-2 mb-2 rounded-xl  py-2 hover:scale-105 duration-300"
                     >
-                      <Link> Register</Link>{" "}
+                       Register
                     </button>
       </form>
       <div className="mt-6 grid grid-cols-3 items-center text-gray-400">

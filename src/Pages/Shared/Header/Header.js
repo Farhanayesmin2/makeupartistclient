@@ -1,12 +1,27 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../images/logo/logo-color.png";
+import { AuthContext } from "../../../Context/UserContext/UserContext";
+
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
+
+
   return (
     <div className="text-black bg-gradient-to-r from-rose-600 via-pink-50 to-rose-600 ">
       <div className=" px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
         <div className="relative  grid items-center grid-cols-2 lg:grid-cols-3">
+       
+
           <ul className=" items-center hidden space-x-8 lg:flex">
             <li>
              <Link
@@ -67,20 +82,38 @@ const Header = () => {
           >
             <img alt="/" className="w-56 h-22" src={logo}></img>
           </Link>
-          <ul className=" items-center hidden ml-auto space-x-8 lg:flex">
+
+          <div className=" items-center hidden ml-auto space-x-8 lg:flex">
+
+            <>
+            {user?.uid ? (
+                <>
+<ul className=" items-center hidden space-x-8 lg:flex">
             <li>
-             <Link
-                to={'/login'}
-                aria-label=" Login"
-                title=" Login"
+                  <Link
+                to={"/addservice"}
+                aria-label="Add Service"
+                title="Add Service"
+                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+              >
+              Add Service
+                  </Link>
+                  </li>
+          </ul>
+ <Link
+                 onClick={handleLogOut}
+                aria-label=" LogOut"
+                title=" Log out"
                 className="text-black bg-gradient-to-tr from-rose-600 via-pink-50 to-rose-600  inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:scale-105 duration-300"
              
               >
-                Login
+                LogOut
               </Link>
-            </li>
-            <li>
-             <Link
+
+
+                </> ): (
+                  <>
+ <Link
                 to={'/register'}
                 className="text-black bg-gradient-to-tr from-rose-600 via-pink-50 to-rose-600  inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition  rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:scale-105 duration-300"
                 aria-label="Sign up"
@@ -88,8 +121,72 @@ const Header = () => {
               >
                 Register
               </Link>
-            </li>
-          </ul>
+
+
+                  </>
+
+
+              )
+            }
+            
+      
+            </>
+
+
+{/* <>
+                {user?.uid ? (
+                  <>
+                    <button
+                      className="py-2 md:mr-6 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+                      onClick={handleLogOut}
+                    >
+                      Log out
+                    </button>
+                   
+                  </>
+                ) : (
+                  <>
+                    <Link
+                      className="py-2 mx-1 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+                      to="/login"
+                    >
+                      <button>LogIn</button>
+                    </Link>
+
+                    <Link
+                      className="py-2 mx-1 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75"
+                      to="/register"
+                    >
+                      <button>Register</button>
+                    </Link>
+                  </>
+                )}
+              </>
+            
+       */}
+       
+      
+          
+           
+          
+        
+       
+         
+        
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
           <div className="ml-auto lg:hidden">
             <button
               aria-label="Open Menu"
