@@ -70,3 +70,8 @@ step: 3 Enable the google,email auth.
 # install React Icon
 
 step: npm install react-icons --save
+
+# React photo views
+
+step:
+npm install react-photo-view

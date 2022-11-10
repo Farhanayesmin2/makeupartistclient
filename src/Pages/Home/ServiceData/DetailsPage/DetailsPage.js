@@ -2,6 +2,7 @@ import React from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IoDiamondSharp } from "react-icons/io5";
 import { Link, useLoaderData } from "react-router-dom";
+import { PhotoProvider, PhotoView } from 'react-photo-view';
 const DetailsPage = () => {
 
     const service = useLoaderData();
@@ -17,12 +18,27 @@ const DetailsPage = () => {
         <div>
           <h4 class="mt-1 bg-rose-50 text-pink-900 py-2 text-xl font-semibold  leading-tight truncate">
             Package: {packages}
-          </h4>
+                      </h4>
+                      
+                      <PhotoProvider>
+      <div className="foo">
+    
+          <PhotoView key={img._id} src={img}>
           <img
             src={img}
             alt=" random imgee"
             class="w-full h-96 mx-0 p-0 object-cover object-center rounded-lg shadow-md"
           />
+          </PhotoView>
+    
+      </div>
+    </PhotoProvider>
+
+          {/* <img
+            src={img}
+            alt=" random imgee"
+            class="w-full h-96 mx-0 p-0 object-cover object-center rounded-lg shadow-md"
+          /> */}
 
           <div class="relative px-4 -mt-16  ">
             <div class="bg-white p-6 rounded-lg shadow-lg">
