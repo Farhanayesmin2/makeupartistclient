@@ -1,10 +1,15 @@
 import React from 'react';
+import DataLimit from './ServiceData/DataLimit/DataLimit';
+
 
 const Home = () => {
+
+  // console.log(service.discription);
     return (
         <div>
-           <img src='https://i.ibb.co/m6zcQ4Z/283480016-558438172524437-8267608540637746057-n.jpg
-'></img> 
+         
+ <DataLimit></DataLimit>
+        
         </div>
     );
 };

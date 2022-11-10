@@ -4,38 +4,58 @@ import logo from "../../../images/logo/logo-color.png";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className="bg-gray-900">
-      <div className="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
-        <div className="relative flex grid items-center grid-cols-2 lg:grid-cols-3">
-          <ul className="flex items-center hidden space-x-8 lg:flex">
+    <div className="text-black bg-gradient-to-r from-rose-600 via-pink-50 to-rose-600 ">
+      <div className=" px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
+        <div className="relative  grid items-center grid-cols-2 lg:grid-cols-3">
+          <ul className=" items-center hidden space-x-8 lg:flex">
             <li>
              <Link
-                href="/"
-                aria-label="Our product"
-                title="Our product"
+      to={'/home'}
+                aria-label="Home"
+                title="Home"
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
-                Product
+                Home
               </Link>
             </li>
             <li>
              <Link
-                href="/"
-                aria-label="Our product"
-                title="Our product"
+              to={'/services'}
+                aria-label="Services"
+                title="Our Services"
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
-                Features
+               Services
               </Link>
             </li>
             <li>
              <Link
-                href="/"
-                aria-label="Product pricing"
-                title="Product pricing"
+                 to={'/booking'}
+                aria-label="Booking Service"
+                title=" Booking Service"
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
-                Pricing
+               Booking
+              </Link>
+            </li>
+            <li>
+             <Link
+                 to={'/gallery'}
+                aria-label="Our Gallery"
+                title="Our Gallery"
+                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+              >
+               Gallery
+              </Link>
+            </li>
+            <li>
+             <Link
+                 to={'/blog'}
+                aria-label="Blog"
+                title="Blog"
+                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+              >
+               Blog
               </Link>
             </li>
           </ul>
@@ -47,13 +67,13 @@ const Header = () => {
           >
             <img alt="/" className="w-56 h-22" src={logo}></img>
           </Link>
-          <ul className="flex items-center hidden ml-auto space-x-8 lg:flex">
+          <ul className=" items-center hidden ml-auto space-x-8 lg:flex">
             <li>
              <Link
                 to={'/login'}
-                aria-label="Sign in"
-                title="Sign in"
-                className="bg-rose-300 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                aria-label=" Login"
+                title=" Login"
+                className="text-black bg-gradient-to-tr from-rose-600 via-pink-50 to-rose-600  inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:scale-105 duration-300"
              
               >
                 Login
@@ -62,11 +82,11 @@ const Header = () => {
             <li>
              <Link
                 to={'/register'}
-                className="bg-rose-300 inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                className="text-black bg-gradient-to-tr from-rose-600 via-pink-50 to-rose-600  inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition  rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:scale-105 duration-300"
                 aria-label="Sign up"
-                title="Sign up"
+                title="Please Register"
               >
-                Sign up
+                Register
               </Link>
             </li>
           </ul>
