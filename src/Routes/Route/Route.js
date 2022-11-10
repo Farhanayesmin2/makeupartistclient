@@ -2,6 +2,7 @@ import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Register/Login/Login";
 import NotFound from "../../Pages/NotFound/NotFound";
 import Register from "../../Pages/Register/Register";
+import ServiceData from "../../Pages/Home/ServiceData/Service/ServiceData";
 
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -32,7 +33,12 @@ const { default: Banner } = require("../../Pages/Shared/Header/Banner/Banner");
             {
                 path: '/home',
                 element: <Home></Home>,
-              //  loader: ()  => fetch('http://localhost:5000/services') 
+             
+            }, 
+            {
+                path: '/services',
+                element: <ServiceData ></ServiceData>,
+             
             }, 
            
          ]
