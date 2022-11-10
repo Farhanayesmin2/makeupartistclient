@@ -3,7 +3,7 @@ import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IoDiamondSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
 const Dataa = ({ service }) => {
-  const { name, img, title, description, price, packages } = service;
+  const { name,_id, img, title, description, price, packages } = service;
 
   const text = description.slice(0, 100);
   return (
@@ -53,7 +53,7 @@ const Dataa = ({ service }) => {
                   <AiOutlineStar ></AiOutlineStar>
                 </span>
                 <Link
-                to={'/register'}
+                to={`/services/${_id}`}
                 className="text-white  bg-gradient-to-r from-rose-50 via-rose-600 to-rose-50  inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition  rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:scale-105 duration-300 w-56"
                 aria-label="Sign up"
                 title="Please Book Now"

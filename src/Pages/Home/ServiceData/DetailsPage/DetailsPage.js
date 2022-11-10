@@ -1,11 +1,15 @@
 import React from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IoDiamondSharp } from "react-icons/io5";
-import { Link } from "react-router-dom";
-const Service = ({ service }) => {
-  const { name,_id, img, title, description, price, packages } = service;
+import { Link, useLoaderData } from "react-router-dom";
+const DetailsPage = () => {
 
-  const text = description.slice(0, 100);
+    const service = useLoaderData();
+
+
+  const { name, img, title, description, price, packages } = service;
+  console.log(service.details);
+  
   return (
     <div>
     <div className="py-3 container mx-0 my-3">
@@ -29,13 +33,16 @@ const Service = ({ service }) => {
                 <span class="  text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                   <IoDiamondSharp className="w-6 h-6 text-cyan-600 animate-pulse"  ></IoDiamondSharp>
                 </span>
-             
+              
               </div>
 
               <h4 class="mt-1 text-pink-900 text-lg text-start font-semibold  leading-tight truncate">
                 {title}
               </h4>
-              <span class="mt-1 text-sm  text-start">{text + "..."}</span>
+              <span class="mt-1 text-sm  text-start">{description}</span>
+                              
+
+                              
               <div class="mt-1  text-start  text-xl font-bold text-rose-700">
                 Price:{price}
                 <span class="text-gray-600 text-sm"> /-</span>
@@ -51,8 +58,8 @@ const Service = ({ service }) => {
                   <AiOutlineStar ></AiOutlineStar>
                 </span>
                 <Link
-                to={`/services/${_id}`}
-                className="text-white  bg-gradient-to-r from-rose-50 via-rose-600 to-rose-50  inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition  rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:scale-105 duration-300 w-56"
+                to={'/book'}
+                className="text-white  bg-gradient-to-r from-rose-50 via-rose-600 to-rose-50  inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition  rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:scale-j5 duration-300 w-56"
                 aria-label="Sign up"
                 title="Please Book Now"
               >
@@ -73,4 +80,8 @@ const Service = ({ service }) => {
   );
 };
 
-export default Service;
+export default DetailsPage;
+
+
+
+
