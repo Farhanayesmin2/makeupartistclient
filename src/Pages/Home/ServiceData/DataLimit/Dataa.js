@@ -8,7 +8,7 @@ const Dataa = ({ service }) => {
   const text = description.slice(0, 100);
   return (
     <div>
-    <div className="py-3 container mx-0 my-3">
+    <div className="py-3 container mx-auto my-3">
       <div class="  wrapper antialiased text-gray-900">
         <div>
           <h4 class="mt-1 bg-rose-50 text-pink-900 py-2 text-xl font-semibold  leading-tight truncate">

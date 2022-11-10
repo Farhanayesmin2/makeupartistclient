@@ -4,6 +4,7 @@ import NotFound from "../../Pages/NotFound/NotFound";
 import Register from "../../Pages/Register/Register";
 import ServiceData from "../../Pages/Home/ServiceData/Service/ServiceData";
 import DetailsPage from "../../Pages/Home/ServiceData/DetailsPage/DetailsPage"
+import AddService from "../../PrivatePage/AddService/AddService";
 
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -39,6 +40,11 @@ const { default: Banner } = require("../../Pages/Shared/Header/Banner/Banner");
             {
                 path: '/services',
                 element: <ServiceData ></ServiceData>,
+             
+            }, 
+            {
+                path: '/addservices',
+                element: <AddService></AddService>,
              
             }, 
             {
