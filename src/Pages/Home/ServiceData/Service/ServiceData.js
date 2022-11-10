@@ -18,7 +18,7 @@ const ServiceData = () => {
         .then(data => setServices(data))
     }, []);
     if(loading){
-        return  <Spinner animation="border" variant="primary" />
+        return  <Spinner animation="border" className="text-rose-900 text-5xl"  />
     }
 console.log(services);
     return (

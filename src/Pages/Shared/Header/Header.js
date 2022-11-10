@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../images/logo/logo-color.png";
 import { AuthContext } from "../../../Context/UserContext/UserContext";
+import MyReview from "../../../PrivatePage/MyReview/MyReview";
 
 
 const Header = () => {

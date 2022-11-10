@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { IoDiamondSharp } from "react-icons/io5";
 import logo from "../../../images/logo/logo-color.png";
 const Footers = () => {
   return (
@@ -20,105 +21,105 @@ const Footers = () => {
               </div>
             </div>
             <div className="col-span-6 text-center md:text-left md:col-span-3">
-              <p className="pb-1 text-2xl text-rose-700 font-medium">
+              <p className="pb-1 text-2xl text-rose-700  font-bold">
                 Services
               </p>
               <ul>
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
-                    className="hover:text-rose-600"
+                    to={'/services/636bcbaf57173a4c281de508'}
+                    className="hover:text-rose-600 text-lg flex font-bold"
                   >
-                    Semi-Bride
+                    Soft-Glam  
                   </Link>
                 </li>
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
-                    className="hover:text-rose-600"
+                    to={'/services/636bcbaf57173a4c281de50b'}
+                    className="hover:text-rose-600 text-lg font-bold"
                   >
-                    Gorgeous-Bride
+                   Signature Look
                   </Link>
                 </li>
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
-                    className="hover:text-rose-600"
+                    to={"/services/636bcbaf57173a4c281de50d"}
+                    className="hover:text-rose-600 text-lg flex items-center font-bold "
                   >
-                    Link
+                   Super Special <IoDiamondSharp className="w-5 h-5 text-cyan-600 ml-2 animate-pulse"  ></IoDiamondSharp>
                   </Link>
                 </li>
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
-                    className="hover:text-rose-600"
+                    to={"/services/636bcbaf57173a4c281de50c"} 
+                    className="hover:text-rose-600 flex items-center text-lg font-bold"
                   >
-                    Link
+                    Premium <IoDiamondSharp className="w-5 h-5 text-cyan-600 animate-pulse"  ></IoDiamondSharp>
                   </Link>
                 </li>
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
-                    className="hover:text-rose-600"
+                    to={"/services/636bcbaf57173a4c281de50a"}
+                    className="hover:text-rose-600 text-lg font-bold"
                   >
-                    Link
+                    Exclusive
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="col-span-6 text-center md:text-left md:col-span-3">
-              <p className="pb-1 text-2xl text-rose-700 font-medium">
-                Current Packages
+              <p className="pb-1 text-2xl font-bold text-rose-900 ">
+                Menu Items
               </p>
               <ul>
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
+                   to={'/home'}
                     className="hover:text-rose-600"
                   >
-                    High Quality Makeup
+                    Home
                   </Link>
                 </li>
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
+                   to={'/service'}
                     className="hover:text-rose-600"
                   >
-                    Top Brand Product
+                    Services
                   </Link>
                 </li>
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
+                   to={'/booking'}
                     className="hover:text-rose-600"
                   >
-                    Link
+                   Booking
                   </Link>
                 </li>
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
+                   to={'/gallery'}
                     className="hover:text-rose-600"
                   >
-                    Link
+                   Gallery
                   </Link>
                 </li>
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                    href="#"
+                   to={'/review'}
                     className="hover:text-rose-600"
                   >
-                    Link
+                    Review
                   </Link>
                 </li>
               </ul>
@@ -127,10 +128,10 @@ const Footers = () => {
           <div className="grid justify-center pt-6 lg:justify-between">
             <div className="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
               <span className="hover:text-rose-600 ">©2022 Farhana Yesmin</span>
-              <Link rel="noopener noreferrer" href="#">
+              <Link rel="noopener noreferrer"to={'/'}>
                 <span>Privacy policy</span>
               </Link>
-              <Link rel="noopener noreferrer" href="#">
+              <Link rel="noopener noreferrer"to={'/'}>
                 <span>Terms of service</span>
               </Link>
             </div>
@@ -139,7 +140,7 @@ const Footers = () => {
                 <div className="flex justify-center space-x-4">
                   <a
                     rel="noopener noreferrer"
-                    href="#"
+                   to={'/'}
                     title="Instagram"
                     className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-rose-600 text-gray-50"
                   >
@@ -154,7 +155,7 @@ const Footers = () => {
                   </a>
                   <a
                     rel="noopener noreferrer"
-                    href="#"
+                   to={'/'}
                     title="Pinterest"
                     className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-rose-600 text-gray-50"
                   >
@@ -169,7 +170,7 @@ const Footers = () => {
                   </a>
                   <a
                     rel="noopener noreferrer"
-                    href="#"
+                   to={'/'}
                     title="Twitter"
                     className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-rose-600 text-gray-50"
                   >
@@ -184,7 +185,7 @@ const Footers = () => {
                   </a>
                   <a
                     rel="noopener noreferrer"
-                    href="#"
+                   to={'/'}
                     title="Facebook"
                     className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-rose-600 text-gray-50"
                   >
@@ -199,7 +200,7 @@ const Footers = () => {
                   </a>
                   <a
                     rel="noopener noreferrer"
-                    href="#"
+                   to={'/'}
                     title="Gmail"
                     className="flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-rose-600 text-gray-50"
                   >
@@ -216,7 +217,7 @@ const Footers = () => {
               </div>
               <Link
                 rel="noopener noreferrer"
-                href="#"
+               to={'/'}
                 title="Email"
                 className="flex items-center justify-center w-10 h-10 rounded-full bg-rose-600 text-gray-50"
               >
