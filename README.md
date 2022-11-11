@@ -75,3 +75,8 @@ step: npm install react-icons --save
 
 step:
 npm install react-photo-view
+
+<!--
+
+Project Console: https://console.firebase.google.com/project/makeup-artist-af068/overview
+Hosting URL: https://makeup-artist-af068.web.app -->

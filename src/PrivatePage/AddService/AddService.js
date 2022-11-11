@@ -1,16 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-//import { Navigate, useLocation } from 'react-router-dom';
-//import { AuthContext } from '../../Context/UserContext/UserContext';
+import { ToastContainer, toast } from "react-toastify";
+
 const AddService = () => {
  
-        // console.log(title,price,photourl);
-    //     const {user, loading} = useContext(AuthContext);
-    //     const location = useLocation();
-    //     if(user){
-    //         return <Navigate to="/addservice" state={{from: location}} replace></Navigate>
-    //     }
-    // console.log(user);
+   
 
 
   const handleAddService = (event) => {
@@ -52,7 +46,8 @@ const AddService = () => {
       .then((data) => {
         console.log(data);
         if (data.acknowledged) {
-          alert("Order placed successfully");
+            toast.success("Successfully Added Service");
+      
           form.reset();
         }
       })
@@ -60,7 +55,19 @@ const AddService = () => {
   };
 
   return (
-    <div>
+      <div>
+          <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="light"
+                  />
       <div class="mx-auto container flex items-center" id="nav">
         <div class="w-full pt-2 p-4">
           <div class="mx-auto md:p-6 md:w-1/2">

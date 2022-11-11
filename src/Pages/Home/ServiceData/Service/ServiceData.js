@@ -8,20 +8,20 @@ import Dataa from './../DataLimit/Dataa';
 const ServiceData = () => {
     const [services, setServices] = useState([]);
     const { loading} = useContext(AuthContext);
-    
-
-   
-    
     useEffect( () =>{
         fetch('http://localhost:5000/services')
         .then(res =>res.json())
         .then(data => setServices(data))
     }, []);
 
-    
     if(loading){
         return  <Spinner animation="border" className="text-rose-900 text-5xl" varient="info"  />
     }
+    
+   
+
+    
+   
 console.log(services);
     return (
         <div>

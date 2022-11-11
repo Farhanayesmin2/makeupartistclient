@@ -1,11 +1,18 @@
-import React from "react";
+import { Spinner } from "flowbite-react";
+import React, { useContext } from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { IoDiamondSharp } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../../Context/UserContext/UserContext";
 const Service = ({ service }) => {
   const { name,_id, img, title, description, price, packages } = service;
 
   const text = description.slice(0, 100);
+  const { loading} = useContext(AuthContext);
+
+  if(loading){
+    return  <Spinner animation="border" className="text-rose-900 text-5xl" varient="info"  />
+}
   return (
     <div>
     <div className="py-3 container mx-auto my-3">

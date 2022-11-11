@@ -9,6 +9,7 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Gallery from "../../Pages/Others/Gallery/Gallery";
 import Blog from "../../Pages/Others/Blog/Blog";
 import AboutMe from "../../Pages/Others/AboutMe/AboutMe";
+import SetLimitDetails from "../../Pages/Home/ServiceData/DataLimit/SetLimitDetails";
 
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -71,11 +72,14 @@ const { default: Banner } = require("../../Pages/Shared/Header/Banner/Banner");
                 element: <DetailsPage></DetailsPage>,
              loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
             }, 
-            {
-                path: '/setlimit/:id',
-                element: <DetailsPage></DetailsPage>,
-             loader: ({params}) => fetch(`http://localhost:5000/setlimit/${params.id}`)
-            }, 
+
+
+
+            // {
+            //     path: '/setlimit/:id',
+            //     element: <SetLimitDetails></SetLimitDetails>,
+            //  loader: ({params}) => fetch(`http://localhost:5000/setlimit/${params.id}`)
+            // }, 
            
          ]
         
