@@ -24,9 +24,9 @@ console.log(services);
     return (
         <div>
              <div className='text-center mb-4'>
-                <p className="text-4xl py-2 font-bold text-pink-900">Services</p>
-                <h2 className="text-3xl font-semibold text-pink-900">Our Bridal Services </h2>
-                <p>the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+             <h1 className='text-rose-900 text-4xl mb-3 font-serif font-bold mt-5'>Our Services</h1>
+                <h2 className="text-2xl font-semibold font-serif text-rose-400">Enjoy the best Makeover  </h2>
+                <p className='text-gray-400'>the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
             </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {

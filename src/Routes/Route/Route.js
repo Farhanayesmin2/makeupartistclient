@@ -6,6 +6,8 @@ import ServiceData from "../../Pages/Home/ServiceData/Service/ServiceData";
 import DetailsPage from "../../Pages/Home/ServiceData/DetailsPage/DetailsPage"
 import AddService from "../../PrivatePage/AddService/AddService";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import Gallery from "../../Pages/Others/Gallery/Gallery";
+import Blog from "../../Pages/Others/Blog/Blog";
 
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -36,6 +38,16 @@ const { default: Banner } = require("../../Pages/Shared/Header/Banner/Banner");
             {
                 path: '/home',
                 element: <Home></Home>,
+             
+            }, 
+            {
+                path: '/gallery',
+                element: <Gallery></Gallery>   ,
+             
+            }, 
+            {
+                path: '/blog',
+                element: <Blog></Blog>   ,
              
             }, 
             {
