@@ -35,7 +35,7 @@ const AddService = () => {
 
     // }
 
-    fetch("http://localhost:5000/addservice", {
+    fetch("https://makeup-artist-server.vercel.app/addservice", {
       method: "POST",
       headers: {
         "content-type": "application/json",

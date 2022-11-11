@@ -1,5 +1,17 @@
 ### My Makeup Artist Website step:
 
+1. My website name is Makeup Artist
+2. I added few feature,service,about,reviews etc..
+3. There are have database collection .
+4. Get and post data from database.
+5. Added auth,react router ,icon and many kit
+
+# Live server: https://makeup-artist-af068.web.app
+
+# Client Code: https://github.com/Porgramming-Hero-web-course/b6a11-service-review-client-side-Farhanayesmin2
+
+# server code: https://github.com/Porgramming-Hero-web-course/b6a11-service-review-server-side-Farhanayesmin2
+
 # 1: # Getting Started with Create React App
 
 Open cmd and select file,

@@ -7,7 +7,7 @@ const DataLimit= () => {
     const [services, setServices] = useState([]);
 
     useEffect( () =>{
-        fetch('http://localhost:5000/setlimit')
+        fetch('https://makeup-artist-server.vercel.app/setlimit')
         .then(res =>res.json())
         .then(data => setServices(data))
     }, []);

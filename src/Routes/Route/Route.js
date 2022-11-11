@@ -77,12 +77,12 @@ const { default: Banner } = require("../../Pages/Shared/Header/Banner/Banner");
             {
                 path: '/services/:id',
                 element: <DetailsPage></DetailsPage>,
-             loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+             loader: ({params}) => fetch(`https://makeup-artist-server.vercel.app/${params.id}`)
             }, 
 
 
 
-            // {
+            // {https://makeup-artist-server.vercel.app
             //     path: '/setlimit/:id',
             //     element: <SetLimitDetails></SetLimitDetails>,
             //  loader: ({params}) => fetch(`http://localhost:5000/setlimit/${params.id}`)
