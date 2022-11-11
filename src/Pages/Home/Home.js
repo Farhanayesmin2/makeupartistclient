@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import AboutMe from "../Others/AboutMe/AboutMe";
 import Gallery from "../Others/Gallery/Gallery";
 import DataLimit from "./ServiceData/DataLimit/DataLimit";
 
@@ -20,7 +21,7 @@ const Home = () => {
       </div>
 <Gallery></Gallery>
           
-
+<AboutMe></AboutMe>
 
     </div>
   );
