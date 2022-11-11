@@ -9,7 +9,8 @@ import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Gallery from "../../Pages/Others/Gallery/Gallery";
 import Blog from "../../Pages/Others/Blog/Blog";
 import AboutMe from "../../Pages/Others/AboutMe/AboutMe";
-import SetLimitDetails from "../../Pages/Home/ServiceData/DataLimit/SetLimitDetails";
+import MyReview from "../../PrivatePage/MyReview/MyReview"
+
 
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -55,6 +56,12 @@ const { default: Banner } = require("../../Pages/Shared/Header/Banner/Banner");
             {
                 path: '/about',
                 element: <AboutMe ></AboutMe>   ,
+             
+            }, 
+            {
+                path: '/review',
+                element: <PrivateRoute> <MyReview></MyReview> </PrivateRoute>   ,
+               
              
             }, 
             {

@@ -100,6 +100,16 @@ const Header = () => {
               Add Service
                   </Link>
                   </li>
+            <li>
+                  <Link
+                to={"/review"}
+                aria-label="Add Service"
+                title="Review"
+                className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+              >
+              My Reviews
+                  </Link>
+                  </li>
           </ul>
  <Link
                  onClick={handleLogOut}
@@ -121,6 +131,14 @@ const Header = () => {
                 title="Please Register"
               >
                 Register
+              </Link>
+ <Link
+                to={'/login'}
+                className="text-black bg-gradient-to-tr from-rose-600 via-pink-50 to-rose-600  inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition  rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:scale-105 duration-300"
+                aria-label="Sign up"
+                title="Please Login"
+              >
+                Login
               </Link>
 
 
