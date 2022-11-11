@@ -53,12 +53,12 @@ const Dataa = ({ service }) => {
                   <AiOutlineStar ></AiOutlineStar>
                 </span>
                 <Link
-                to={`/services/${_id}`}
+                to={`/setlimit/${_id}`}
                 className="text-white  bg-gradient-to-r from-rose-50 via-rose-600 to-rose-50  inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide  transition  rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none hover:scale-105 duration-300 w-56"
                 aria-label="Sign up"
                 title="Please Book Now"
               >
-                Book Now
+                More Details
               </Link>
               </div>
             </div>

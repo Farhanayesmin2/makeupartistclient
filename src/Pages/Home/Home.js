@@ -1,13 +1,25 @@
-import React from "react";
+import { Spinner } from "flowbite-react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Context/UserContext/UserContext";
 import AboutMe from "../Others/AboutMe/AboutMe";
 import Gallery from "../Others/Gallery/Gallery";
+import Banner from "../Shared/Header/Banner/Banner";
 import DataLimit from "./ServiceData/DataLimit/DataLimit";
 
 const Home = () => {
   // console.log(service.discription);
+  const { loading} = useContext(AuthContext);
+    
+    if(loading){
+        return  <Spinner animation="border" className="text-7xl" varient="info"  />
+             
+    }
+    
+    
   return (
-    <div>
+      <div>
+          <Banner></Banner>
       <DataLimit></DataLimit>
       <div className="py-5">
         <Link

@@ -1,7 +1,17 @@
-import React from 'react';
+import { Spinner } from 'flowbite-react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/UserContext/UserContext';
 
 const NotFound = () => {
+	const { loading} = useContext(AuthContext);
+    
+    if(loading){
+        return  <Spinner animation="border" className="text-7xl" varient="info"  />
+             
+    }
+
+
     return (
         <div>
             <section className="flex items-center h-full p-16 bg-gray-50 text-gray-800">

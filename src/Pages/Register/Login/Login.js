@@ -7,11 +7,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { FcKindle } from "react-icons/fc";
 import { GoogleAuthProvider } from "firebase/auth";
+import { Spinner } from "flowbite-react";
 
 
 const Login = () => {
   const [error, setError] = useState('');
-  const { logIn, setLoading, providerLogin } = useContext(AuthContext);
+  const { logIn, setLoading, providerLogin,loading } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -20,6 +21,11 @@ const Login = () => {
 
   //const from = location.state?.from?.pathname || '/';
 
+  if(loading){
+    return  <Spinner animation="border" className="text-7xl" varient="info"  />
+         
+}
+  
   const handleLogin = event => {
     event.preventDefault();
     const form = event.target;
@@ -31,6 +37,11 @@ const Login = () => {
         const user = result.user;
         console.log(user);
         form.reset();
+        
+  if(loading){
+    return  <Spinner animation="border" className="text-7xl" varient="info"  />
+         
+}
         setError('');
         // if (user.uid) {
         //   navigate(from, { replace: true });

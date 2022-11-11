@@ -46,12 +46,12 @@ const Header = () => {
             </li>
             <li>
              <Link
-                 to={'/booking'}
+                 to={'/about'}
                 aria-label="Booking Service"
                 title=" Booking Service"
                 className="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
               >
-               Booking
+               About Me
               </Link>
             </li>
             <li>

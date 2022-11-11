@@ -8,6 +8,7 @@ import AddService from "../../PrivatePage/AddService/AddService";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Gallery from "../../Pages/Others/Gallery/Gallery";
 import Blog from "../../Pages/Others/Blog/Blog";
+import AboutMe from "../../Pages/Others/AboutMe/AboutMe";
 
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -51,6 +52,11 @@ const { default: Banner } = require("../../Pages/Shared/Header/Banner/Banner");
              
             }, 
             {
+                path: '/about',
+                element: <AboutMe ></AboutMe>   ,
+             
+            }, 
+            {
                 path: '/services',
                 element: <ServiceData ></ServiceData>,
              
@@ -64,6 +70,11 @@ const { default: Banner } = require("../../Pages/Shared/Header/Banner/Banner");
                 path: '/services/:id',
                 element: <DetailsPage></DetailsPage>,
              loader: ({params}) => fetch(`http://localhost:5000/services/${params.id}`)
+            }, 
+            {
+                path: '/setlimit/:id',
+                element: <DetailsPage></DetailsPage>,
+             loader: ({params}) => fetch(`http://localhost:5000/setlimit/${params.id}`)
             }, 
            
          ]

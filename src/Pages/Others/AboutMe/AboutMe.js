@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import about from "../../../images/banner/about.jpg";
 import { GiLoveMystery, GiLovers } from "react-icons/gi";
 import { GrCertificate } from "react-icons/gr";
+import { AuthContext } from "../../../Context/UserContext/UserContext";
+import { Spinner } from "flowbite-react";
 
 
 const AboutMe = () => {
+    const { loading} = useContext(AuthContext);
+    
+    if(loading){
+        return  <Spinner animation="border" className="text-7xl" varient="info"  />
+             
+    }
+
+
   return (
     <div class="flex items-center justify-between border-8 inset-8 border-rose-400 bg-rose-50 ">
       <div class="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">

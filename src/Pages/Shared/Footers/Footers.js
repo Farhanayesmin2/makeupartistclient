@@ -21,7 +21,7 @@ const Footers = () => {
               </div>
             </div>
             <div className="col-span-6 text-center md:text-left md:col-span-3">
-              <p className="pb-1 text-2xl text-rose-700  font-bold">
+              <p className="pb-1 text-2xl text-rose-700 flex items-center font-bold">
                 Services
               </p>
               <ul>
@@ -29,7 +29,7 @@ const Footers = () => {
                   <Link
                     rel="noopener noreferrer"
                     to={'/services/636bcbaf57173a4c281de508'}
-                    className="hover:text-rose-600 text-lg flex font-bold"
+                    className="hover:text-rose-600 text-lg flex items-center font-bold"
                   >
                     Soft-Glam  
                   </Link>
@@ -38,7 +38,7 @@ const Footers = () => {
                   <Link
                     rel="noopener noreferrer"
                     to={'/services/636bcbaf57173a4c281de50b'}
-                    className="hover:text-rose-600 text-lg font-bold"
+                    className="hover:text-rose-600 text-lg flex items-center font-bold"
                   >
                    Signature Look
                   </Link>
@@ -65,7 +65,7 @@ const Footers = () => {
                   <Link
                     rel="noopener noreferrer"
                     to={"/services/636bcbaf57173a4c281de50a"}
-                    className="hover:text-rose-600 text-lg font-bold"
+                    className="hover:text-rose-600 text-lg flex items-center font-bold"
                   >
                     Exclusive
                   </Link>
@@ -89,7 +89,7 @@ const Footers = () => {
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                   to={'/service'}
+                   to={'/services'}
                     className="hover:text-rose-600"
                   >
                     Services
@@ -98,10 +98,10 @@ const Footers = () => {
                 <li>
                   <Link
                     rel="noopener noreferrer"
-                   to={'/booking'}
+                   to={'/about'}
                     className="hover:text-rose-600"
                   >
-                   Booking
+                   About Me
                   </Link>
                 </li>
                 <li>

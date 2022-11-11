@@ -1,4 +1,6 @@
-import React from 'react';
+import { Spinner } from 'flowbite-react';
+import React, { useContext } from 'react';
+import { AuthContext } from '../../../Context/UserContext/UserContext';
 import bride0 from '../../../images/gallery/bride0.jpg';
 import bride1 from '../../../images/gallery/bride1.jpg';
 import bride2 from '../../../images/gallery/bride2.jpg';
@@ -7,6 +9,14 @@ import bride4 from '../../../images/gallery/bride4.jpg';
 import bride5 from '../../../images/gallery/bride5.jpg';
 
 const Gallery = () => {
+
+    const { loading} = useContext(AuthContext);
+    
+    if(loading){
+        return  <Spinner animation="border" className="text-7xl" varient="info"  />
+             
+    }
+
     return (
         <div>
 <h1 className='text-rose-900 text-4xl my-6 font-serif font-bold'>Our Happy Bride</h1>

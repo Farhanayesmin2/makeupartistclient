@@ -6,16 +6,21 @@ import { AuthContext } from '../../Context/UserContext/UserContext';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FcTabletAndroid } from "react-icons/fc";
+import { Spinner } from 'flowbite-react';
 
 
 
 
 const Register = () => {
     const [error, setError] = useState('');
+    const { loading,createUser} = useContext(AuthContext);
     
+    if(loading){
+        return  <Spinner animation="border" className="text-7xl" varient="info"  />
+             
+    }
 
-    const { createUser} = useContext(AuthContext);
-
+    
 
 
     const handleRegister = event => {
@@ -33,7 +38,11 @@ const Register = () => {
                 const user = result.user;
                 console.log(user);
                 setError('');
-                form.reset();
+              form.reset();
+              if(loading){
+                return  <Spinner animation="border" className="text-7xl" varient="info"  />
+                     
+            }
             })
             .catch(error => {
                 console.error(error);
